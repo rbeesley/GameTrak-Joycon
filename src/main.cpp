@@ -4,7 +4,7 @@
 
 #include "Axis.h"
 
-// #define SERIAL_DEBUG true
+//#define SERIAL_DEBUG true
 
 /////////////////////////////////
 //// Pin Definitions
@@ -49,7 +49,6 @@ void setup()
 #if defined(SERIAL_DEBUG)
   // Wait for Serial to become available
   Serial.begin(115200);
-  while (!Serial.available()) {};
 #endif
 
   // Need to acquire the initial state of the foot switch
