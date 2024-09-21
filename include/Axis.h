@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Arduino.h>
+#include "1euroFilter.h"
 
 class Axis{
 private:
@@ -9,6 +10,8 @@ private:
     uint32_t _axisMinimum;
     uint32_t _axisMaximum;
     bool _inverted;
+    unsigned long _start_time;
+    OneEuroFilter _filter;
 
 public:
     Axis(uint8_t pin, uint8_t mode, uint32_t _axisMinimum, uint32_t _axisMaximum, bool inverted);
